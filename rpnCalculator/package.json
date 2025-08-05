@@ -1,0 +1,35 @@
+{
+  "name": "compiler",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "scripts": {
+    "start": "tsx ./bin/main.ts",
+    "watch": "tsx watch ./bin/main.ts",
+    "test:unit": "jest unit",
+    "test:e2e": "jest e2e",
+    "test:rpn:simple_input": "jest e2e/reverse_polish_notation_calculator/success.ts",
+    "test:rpn:complex_input": "jest e2e/reverse_polish_notation_calculator/difficult_success.ts",
+    "test:rpn:invalid_error": "jest e2e/reverse_polish_notation_calculator/invalid_error.ts",
+    "test:rpn:syntax_error": "jest e2e/reverse_polish_notation_calculator/syntax_error.ts",
+    "test:rpn:zero_division_error": "jest e2e/reverse_polish_notation_calculator/zero_division_error.ts",
+    "test:typecheck": "tsc --noEmit --skipLibCheck --project tsconfig.json",
+    "lint:check": "eslint",
+    "lint:fix": "eslint --fix",
+    "format:check": "prettier --check '**/*.{js,ts}'",
+    "format:fix": "prettier --write '**/*.{js,ts}'"
+  },
+  "dependencies": {
+    "tsx": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.7",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0"
+  }
+}
