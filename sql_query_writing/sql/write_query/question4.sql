@@ -1,0 +1,2 @@
+-- 以下にクエリを書いてください
+SELECT post_tags.post_id, posts.content FROM posts JOIN post_tags ON posts.id = post_tags.post_id JOIN tags ON post_tags.tag_id = tags.id WHERE tags.name = 'programming' ORDER BY post_tags.post_id ASC;
